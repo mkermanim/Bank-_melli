@@ -4,7 +4,7 @@ library(pander)
 library(xlsx)
 
 #reading comments file as a df 
-dfcomms <- as.data.frame(data.table::fread(file = 'comments.csv'))
+dfcomms <- as.data.frame(data.table::fread(file = 'comment.csv'))
 
 # selecting unique usernames 
 uniqun <- dfcomms %>% select(username,count) %>%  distinct(username, .keep_all = T)
