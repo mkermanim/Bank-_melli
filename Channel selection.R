@@ -3,7 +3,9 @@ library(tidyverse)
 library(pander)
 library(xlsx)
 library(readxl)
+library(writexl)
 library(persiandictionary)
+library(ggplot2)
 
 #reading comments file as a df 
 channel_comms <- read_xlsx('comments_channel.xlsx', 1)
