@@ -2,6 +2,8 @@ library(dplyr)
 library(tidyverse)
 library(pander)
 library(xlsx)
+library(writexl)
+library(magrittr)
 
 #reading comments file as a df 
 dfcomms <- as.data.frame(data.table::fread(file = 'comments_pod.csv'))
@@ -16,6 +18,6 @@ samplresult <- sample_n(uniqun,3)
 samplresult  %>% pander(style="rmarkdown")
 
 # exporting result as a excel file
-write.xlsx(samplresult, 'result_podcast.xlsx')
+write_xlsx(samplresult, 'result_podcast.xlsx')
 
 
